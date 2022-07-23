@@ -11,6 +11,18 @@
 
 <body>
 
+  <div class="init">
+    <div class="pop-up">
+      <span class="head-pop" style="margin: 0 0 8px 0">Digite a senha para entrar:</span>
+      <form action="" method="get" class="pass">
+        <input type="password" name="pass" id="pass">
+        <button type="submit">Entrar</button>
+      </form>
+      <span class="try" style="opacity: 0">Senha Errada! Tente novamente.</span>
+    </div>
+
+  </div>
+
   <header>
     <div>
       <span class="c-l">Shaulyn Peças</span>
@@ -404,15 +416,31 @@
 </body>
 
 <script>
+  const passJson = "384560#e";
+  if (localStorage.pass === 'true') {
+    document.body.removeAttribute('style');
+    document.querySelector('.init').setAttribute('style', 'display: none');
+  } else {
+    document.querySelector('form.pass').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const pass = document.querySelector('#pass').value
+      if (pass === passJson) {
+        localStorage.setItem('pass', 'true');
+        location.reload();
+      } else {
+        document.querySelector('.try').removeAttribute('style');
+      }
+    })
+  }
+
   function myFunction() {
-    // Declare variables
+
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById('search');
     filter = input.value.toUpperCase();
     ul = document.querySelector("tbody");
     li = ul.querySelectorAll('tbody tr');
-  
-    // Loop through all list items, and hide those who don't match the search query
+
     for (i = 0; i < li.length; i++) {
       a = li[i].querySelectorAll("tbody tr td")[0];
       txtValue = a.textContent || a.innerText;
@@ -423,6 +451,6 @@
       }
     }
   }
-  </script>
+</script>
 
 </html>
