@@ -38,17 +38,19 @@ tr {
 }
 
 #search {
-    background: #fdd4d4;
+    background: #fff;
+    width: 100%;
     border: none;
     border-radius: 5px;
-    padding: 4px
+    padding: 4px;
+    margin-bottom: 4px;
 }
 
 header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 8px;
     background: #f96363;
     margin-bottom: 8px
