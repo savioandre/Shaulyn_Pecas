@@ -9,16 +9,25 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body style="overflow: hidden">
+<body style="overflow: hidden;">
 
   <div class="init">
     <div class="pop-up">
-      <span class="head-pop" style="margin: 0 0 8px 0">Digite a senha para entrar:</span>
-      <form action="" method="get" class="pass">
-        <input type="password" name="pass" id="pass">
-        <button type="submit">Entrar</button>
-      </form>
-      <span class="try" style="opacity: 0">Senha Errada! Tente novamente.</span>
+      <div class="password">
+        <span class="head-pop" style="margin: 0 0 8px 0">Digite a senha para entrar:</span>
+        <form action="" method="get" class="pass">
+          <input type="password" name="pass" id="pass">
+          <button type="submit">Entrar</button>
+        </form>
+        <span class="try" style="opacity: 0">Senha Errada! Tente novamente.</span>
+      </div>
+      <div class="sum" style="opacity: 0;">
+        <h3>Soma Total dos valores</h3>
+        <div class="content">
+          <span class="value"></span>
+        </div>
+        <button class="close">Fechar</button>
+      </div>
     </div>
 
   </div>
@@ -26,6 +35,18 @@
   <header>
     <div>
       <span class="c-l">Shaulyn Peças</span>
+    </div>
+
+    <div class="opt">
+      <div>
+        <button class="s-t" id="o-v">Valor Total</button>
+      </div>
+      <div>
+        <button class="s-t" id="o-t">Total de Clientes</button>
+      </div>
+      <div>
+        <button class="s-t" id="o-c">Clientes Atrasados</button>
+      </div>
     </div>
   </header>
 
@@ -414,7 +435,7 @@
 
   </form>
 </body>
-
+<script src="./index.js"></script>
 <script>
   const passJson = "384560#e";
   if (localStorage.pass === 'true') {

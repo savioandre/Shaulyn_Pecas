@@ -37,6 +37,31 @@ tr {
     color: black;
 }
 
+.opt {
+    display: flex;
+    gap: 8px;
+}
+
+.s-t {
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    background: #ffffff;
+}
+
+.s-t:hover {
+    background: #fdd4d4;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close {
+    padding: 0px 6px;
+}
+
 #search {
     background: #fff;
     width: 100%;
@@ -50,7 +75,7 @@ header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 8px;
     background: #f96363;
     margin-bottom: 8px
